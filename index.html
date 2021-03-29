@@ -28,15 +28,25 @@
               </li>
               <li class="navbar-menu__item">
                 <a href="" class="navbar-menu__link">Лэндинги</a>
+                <img
+                  src="img/angle-down.svg"
+                  alt="icon: angle-down"
+                  class="navbar-menu__icon"
+                />
               </li>
               <li class="navbar-menu__item">
                 <a href="" class="navbar-menu__link">Страницы</a>
+                <img
+                  src="img/angle-down.svg"
+                  alt="icon: angle-down"
+                  class="navbar-menu__icon"
+                />
               </li>
               <li class="navbar-menu__item">
                 <a href="" class="navbar-menu__link">Помощь</a>
               </li>
             </ul>
-            <button class="navbar-button">Получить</button>
+            <button data-toggle="modal" class="button navbar-button">Получить</button>
           </div>
           <!-- /.navbar-navigation -->
         </div>
@@ -45,5 +55,93 @@
       <!-- /.container -->
     </header>
     <!-- /.header -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-decription">
+            <div class="hero-decription__text">
+              <h1 class="hero-decription__title">
+                Номер #1,&nbsp; <br />
+                <span class="asia-title">Южная Азия</span> <br />
+                Агенство цифровых продуктов
+              </h1>
+              <p class="hero-decription__desc">
+                Мы даем результаты, помогающие Вам добиться экономии средств и
+                времени без риска или накладных расходов на управление
+              </p>
+            </div>
+            <!-- /.hero-decription__text -->
+            <button class="hero-decription__button">Наше портфолио</button>
+            <a href="#" class="hero-decription__down"
+              ><img src="img/down-image.svg" alt="" class="down-image"
+            /></a>
+          </div>
+          <!-- /.hero-decription -->
+          <div class="hero-image">
+            <img
+              src="img/hero-pictures.png"
+              alt="photo: Macbook"
+              class="hero-image__hero-pictures"
+            />
+          </div>
+          <!-- /.hero-image -->
+        </div>
+      </div>
+    </section>
+    <!-- /.hero -->
+
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="Icon: close" />
+        </a>
+        <h3 class="modal__title modal__title--mb-3">Обратная связь</h3>
+        <form action="send.php" method="POST" class="modal__form form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Твоё имя*"
+            name="name"
+            required
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal__input"
+            placeholder="Твой номер телефона*"
+            required
+            name="phone"
+            minlength="18"
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Твоя электронная почта*"
+            name="email"
+            required
+          />
+          <textarea
+            cols="30"
+            rows="10"
+            class="message modal__message"
+            placeholder="Текст заявки"
+            name="message"
+          ></textarea>
+          <div class="modal__infoButton">
+            <button class="button modal__button" type="submit">Send</button>
+            <span class="modal__info">* Обязательные поля</span>
+          </div>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
