@@ -11,6 +11,10 @@
     display: flex
     justify-content: space-between
     align-items: center
+  &-top
+    &__menu
+      &-button
+        display: none
   &-menu
     padding-right: 6px
     width: 415px
@@ -21,6 +25,13 @@
     &__item
       display: flex
       align-items: center
+      &--dropdown
+        position: relative
+        display: inline-block
+        // &:hover .dropdown-content
+        //   display: block
+    &__icon
+      margin-left: 6px
     &__link
       font-family: Open Sans
       font-style: normal
@@ -29,7 +40,10 @@
       line-height: 22px
       color: #183B56
       text-decoration: none
-      margin-right: 3px
+      display: flex
+      align-items: center
+      // &:hover
+      //   color: #1565D8
   &-button
     padding: 13px 24px
     font-family: Open Sans
@@ -43,6 +57,7 @@
     border-radius: 8px
     background-color: #FAFDFF
     cursor: pointer
+    outline: none
     // overflow: hidden
     // text-overflow: ellipsis
     // white-space: nowrap
@@ -50,5 +65,26 @@
   &__image
     width: 90px
     height: 28px
+.dropdown
+  &-content
+    display: none
+    position: absolute
+    // background-color: #1565D8
+    // min-width: 100px
 
+    // z-index: 1
+    top: 20px
+    right: 0
+    &__link
+      text-decoration: none
+      display: block
+      // background-color: #FAFDFF
+      color: #183B56
+      font-family: Open Sans
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 22px
+      // &:hover
+      //   color: #00B8D9
 

@@ -3,9 +3,13 @@ h1, h2, p
 .hero
   background-color: #FAFDFF
   padding-top: 52px
+  padding-bottom: 100px
+  overflow: hidden
+  position: relative
   &-wrapper
     display: flex
-  &-decription
+
+  &-description
     &__text
       width: 499px
     &__title
@@ -16,7 +20,6 @@ h1, h2, p
       line-height: 60px
       letter-spacing: 0.2px
       color: #183B56
-      margin-bottom: 15px
     &__desc
       width: 457px
       font-family: Open Sans
@@ -39,6 +42,7 @@ h1, h2, p
       margin-bottom: 56px
       cursor: pointer
       border: none
+      outline: none
       // overflow: hidden
       // text-overflow: ellipsis
       // white-space: nowrap
@@ -51,11 +55,29 @@ h1, h2, p
       object-fit: scale-down
       width: 1030px
       height: 657px
-.asia-title
-  font-family: Roboto
-  font-style: normal
-  font-weight: bold
-  font-size: 36px
-  line-height: 60px
-  letter-spacing: 0.2px
-  color: #183B56
+      overflow: hidden
+
+.asia
+  &-title
+    display: block
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 60px
+    letter-spacing: 0.2px
+    color: #183B56
+.agency
+  &-title
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+    color: #183B56
+    display: block
+    margin-bottom: 15px
+
+.down-image
+  display: block

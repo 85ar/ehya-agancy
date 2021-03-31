@@ -18,7 +18,7 @@
     top: 50%
     left: 50%
     max-width: 478px
-    padding: 33px 88px
+    padding: 33px 70px
     background-color: #1565D8
     transform: translate(-50%, -50%)
     color: white
@@ -42,15 +42,15 @@
     font-size: 18px
     line-height: 23px
     text-transform: uppercase
-    margin-bottom: 15px
+    margin-bottom: 25px
     text-align: center
   &__input
     width: 100%
     margin-top: 15px
+    font-size: 14px
+    font-family: Roboto
     font-style: normal
     font-weight: normal
-    font-size: 12px
-    line-height: 15px
     color: $text-color
     outline: none
     background-color: #fff
@@ -58,17 +58,18 @@
     border: none
     padding: 0 23px
     height: 50px
+
   &__input:first-child
     margin-top: 0
   &__message
+    font-size: 14px
+    font-family: Roboto
     font-style: normal
     font-weight: normal
-    font-size: 12px
-    line-height: 15px
     width: 100%
     max-height: 123px
     margin-top: 15px
-    color: black
+    color: $text-color
     resize: none
     outline: none
     margin-bottom: 2px
@@ -104,11 +105,17 @@
     width: 100%
   &__form
     #name-error
-      top: 103px
-      right: 95px
+      top: 114px
+      right: 80px
     #phone-error
-      top: 168px
-      right: 94px
+      top: 177px
+      right: 80px
     #email-error
-      top: 233px
-      right: 97px
+      top: 242px
+      right: 80px
+.form
+  label.invalid
+    position: absolute
+    font-size: 13px
+    color: tomato
+    font-weight: bold

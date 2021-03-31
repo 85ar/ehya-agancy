@@ -1,3 +1,8 @@
+var menuButton = $(".menu-button");
+menuButton.on("click", function () {
+  $(".navbar-navigation").toggleClass("navbar-navigation--visible");
+});
+
 var modalButton = $("[data-toggle=modal]");
 var closeModalButton = $(".modal__close");
 modalButton.on("click", openModal);
@@ -39,7 +44,7 @@ $(".form").each(function () {
         email: "Почта должна иметь вид name@domain.com",
       },
       phone: {
-        required: "Введите ваш номер телефона",
+        required: "Введите номер телефона",
         minlength: "Номер телефона в виде: +7 (999) 999-99-99",
       },
     },

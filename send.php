@@ -10,20 +10,13 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST['email'];
 
-if(isset($_POST['email'])){
-    $title = "New subscriber Best Tour Plan";
-    $body = "
-    <h2>New subscriber</h2>
-    <b>Email:</b> $email";
-} else {
-    $title = "New appeal Best Tour Plan";
-    $body = "
-    <h2>New appeal</h2>
-    <b>Name:</b> $name<br>
-    <b>Phone:</b> $phone<br><br>
-    <b>Message:</b><br>$message";
-    }
-
+$title = "Новая заявка";
+$body = "
+  <h2>Новая заявка:</h2>
+  <b>Name:</b> $name<br>
+  <b>Phone:</b> $phone<br><br>
+  <b>Message:</b><br>$message";
+ 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
