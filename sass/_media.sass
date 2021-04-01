@@ -1,12 +1,38 @@
 @media (min-width: 1450px)
   .hero
     background-position: 1000px 63px
+@media (max-width: 1250px)
+  .partners
+    &-info
+      max-width: 1000px
+
 @media (max-width: 1200px)
   .container
     max-width: 960px
+  .partners
+    padding: 100px 0 102px 0
+    &-info
+      width: 100%
+      flex-direction: column
+      margin-bottom: 20px
+      &__about
+        width: 777px
+      &__name
+        margin-bottom: 15px
+    &-icons
+      width: 100%
+      flex-wrap: wrap
+      justify-content: space-between
+      margin: auto
+      &-link
+        flex-basis: 21%
+        width: 150px
+        margin-bottom: 15px
+
 @media (max-width: 1024px)
   .hero
     background-position: 580px 63px
+
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -37,6 +63,12 @@
     &__button
       order: 2
       width: 100%
+  .partners
+    &-title
+      text-align: center
+    &-info
+      &__about
+        width: 600px
 @media (max-width: 820px)
   .hero
     background-position: 480px 63px
@@ -83,7 +115,7 @@
       &__icon
         display: none
   .hero
-    background: url('../../img/hero-pictures.png')
+    background: url('../img/hero-pictures.png')
     background-repeat: no-repeat
     background-position: 224px 463px
     background-size: 750px
@@ -131,6 +163,23 @@
       font-size: 12px
     &__message
       font-size: 12px
+  .partners
+    &-info
+      &__name
+        font-size: 30px
+        text-align: center
+        &--first
+          display: block
+      &__about
+        font-size: 16px
+        width: 550px
+        text-align: center
+    &-icons
+      &-link
+        flex-basis: 21%
+    &-link
+      width: 108px
+      height: 31px
 @media (max-width: 576px)
   .hero
     background-position: 120px 497px
@@ -150,6 +199,15 @@
   .agency
     &-title
       font-size: 28px
+  .partners
+    &-info
+      &__name
+        font-size: 28px
+      &__about
+        font-size: 13px
+        width: 400px
+    &-icons
+      width: 300px
 
 @media (min-width: 320px) and (max-width: 480px)
   body
@@ -163,6 +221,8 @@
     &-navigation
       top: 61px
       padding-bottom: 20px
+      &--visible
+        height: calc(100% - 61px)
     &-menu
       padding-bottom: 20px
     &-button
@@ -187,7 +247,7 @@
       &__down
         left: 40%
         bottom: -390px
-        
+
       &__desc
         font-size: 16px
         line-height: 28px
@@ -208,9 +268,33 @@
     &-title
       font-size: 30px
       line-height: 36px
+  .partners
+    padding-top: 2px
+    &-info
+      margin-bottom: -2px
+      &__name
+        width: 280px
+        line-height: 30px
+        margin-bottom: 13px
+      &__about
+        width: 100%
+        margin-bottom: 24px
+        line-height: 24px
+    &-title
+      line-height: 29px
+      letter-spacing: 2.2px
+      margin-left: 34px
+      margin-bottom: 16px
+    &-icons
+      width: 241px
+      &-link
+        margin-bottom: 26px
+        &:last-child
+          display: none
+
 @media (width: 320px)
   .hero
-    background: url('../../img/hero-pictures-mobile.png')
+    background: url('../img/hero-pictures-mobile.png')
     background-color: #FAFDFF
     background-repeat: no-repeat
     background-position: -35px 450px
@@ -229,7 +313,6 @@
     &-navigation
       &--visible
         overflow-y: auto
-        height: 100%
         padding-bottom: 20px
 @media (min-width: 992px)
   .navbar
@@ -273,3 +356,8 @@
     &__button
       &:hover
         box-shadow: 0 0 16px #00B8D9
+  .partners
+    &-icons
+      &-link
+        &:hover
+          box-shadow: 0 0 12px #00B8D9
