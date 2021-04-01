@@ -3,26 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Ehya - web agancy</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar navbar--mobile-fixed">
       <div class="container">
         <div class="navbar-block">
-          <div class="navbar-logo">
+          <div class="navbar-logo" data-aos="fade-right" data-aos-delay="100">
             <a href="index.html" class="logo"
               ><img src="img/Logo.svg" alt="logo: Ehya" class="logo__image"
             /></a>
           </div>
           <div class="navbar-navigation">
-            <ul class="navbar-menu">
+            <ul class="navbar-menu" data-aos="fade-left" data-aos-delay="200">
               <li class="navbar-menu__item">
                 <a href="" class="navbar-menu__link">Домой</a>
               </li>
@@ -59,46 +62,42 @@
                 <a href="" class="navbar-menu__link">Помощь</a>
               </li>
             </ul>
-            <button data-toggle="modal" class="button navbar-button">
+            <button data-toggle="modal" class="button navbar-button" type="submit" data-aos="fade-left" data-aos-delay="300">
               Получить
             </button>
           </div>
           <!-- /.navbar-navigation -->
+          <button class="menu-button menu-button-navbar">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </button>
         </div>
         <!-- /.navbar-block -->
       </div>
       <!-- /.container -->
     </header>
     <!-- /.header -->
-    <section class="hero">
+   <section class="hero hero-thankyou">
       <div class="container">
         <div class="hero-wrapper">
-          <div class="hero-decription">
-            <div class="hero-decription__text">
-              <h1 class="hero-decription__title">Ваше сообщение отправлено!</h1>
-              <p class="hero-decription__desc">
+          <div class="hero-description">
+            <div class="hero-description__text">
+              <h1 class="hero-description__title">Ваше сообщение отправлено!</h1>
+              <p class="hero-description__desc">
                 Наш менеджер свяжется с Вами в течение 5 минут
               </p>
-              <form action="index.html" class="thankyou__form">
-                <button class="hero-decription__button" type="submit">
+              <form action="index.html" class="hero-description__form">
+                <button class="hero-description__button" type="submit">
                   Главная страница
                 </button>
               </form>
             </div>
             <!-- /.hero-decription -->
           </div>
-          <div class="hero-image">
-            <img
-              src="img/hero-pictures.png"
-              alt="photo: Macbook"
-              class="hero-image__hero-pictures"
-            />
-          </div>
-          <!-- /.hero-image -->
-        </div>
+                  </div>
       </div>
     </section>
-    <!-- /.hero -->
 
     <div class="modal">
       <div class="modal__overlay"></div>
@@ -112,7 +111,7 @@
           <input
             type="text"
             class="input modal__input"
-            placeholder="Твоё имя*"
+            placeholder="Имя*"
             name="name"
             required
             minlength="2"
@@ -120,7 +119,7 @@
           <input
             type="tel"
             class="input modal__input"
-            placeholder="Твой номер телефона*"
+            placeholder="Номер телефона*"
             required
             name="phone"
             minlength="18"
@@ -128,7 +127,7 @@
           <input
             type="email"
             class="input modal__input"
-            placeholder="Твоя электронная почта*"
+            placeholder="Электронная почта*"
             name="email"
             required
           />
@@ -154,6 +153,7 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

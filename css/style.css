@@ -392,10 +392,6 @@ template {
           align-items: center;
 }
 
-.navbar-top__menu-button {
-  display: none;
-}
-
 .navbar-menu {
   padding-right: 6px;
   width: 415px;
@@ -444,7 +440,7 @@ template {
 }
 
 .navbar-button {
-  padding: 13px 24px;
+  padding: 11px 23px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -483,22 +479,25 @@ template {
   line-height: 22px;
 }
 
+.menu-button-navbar {
+  display: none;
+}
+
 h1, h2, p {
   margin: 0;
 }
 
 .hero {
+  background: url("../../img/hero-pictures.png");
   background-color: #FAFDFF;
+  background-repeat: no-repeat;
+  background-position: 686px 63px;
   padding-top: 52px;
   padding-bottom: 100px;
-  overflow: hidden;
-  position: relative;
 }
 
 .hero-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
 }
 
 .hero-description__text {
@@ -513,6 +512,7 @@ h1, h2, p {
   line-height: 60px;
   letter-spacing: 0.2px;
   color: #183B56;
+  margin-bottom: 6px;
 }
 
 .hero-description__desc {
@@ -527,7 +527,7 @@ h1, h2, p {
 }
 
 .hero-description__button {
-  padding: 15px 38px;
+  padding: 15px 40px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -540,21 +540,17 @@ h1, h2, p {
   cursor: pointer;
   border: none;
   outline: none;
-}
-
-.hero-image {
-  position: relative;
-}
-
-.hero-image__hero-pictures {
-  position: absolute;
-  top: 10px;
-  left: -100px;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  width: 1030px;
-  height: 657px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hero-description__down {
+  width: 54px;
+  height: 56px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .asia-title {
@@ -582,6 +578,7 @@ h1, h2, p {
 
 .down-image {
   display: block;
+  border-radius: 50%;
 }
 
 .modal__overlay {
@@ -635,6 +632,7 @@ h1, h2, p {
 }
 
 .modal__title {
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -687,6 +685,7 @@ h1, h2, p {
 }
 
 .modal__button {
+  font-family: Roboto;
   min-width: 160px;
   padding: 18px;
   font-style: normal;
@@ -702,11 +701,12 @@ h1, h2, p {
 }
 
 .modal__info {
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #00B8D9;
+  color: #fff;
 }
 
 .modal__infoButton {
@@ -744,9 +744,26 @@ h1, h2, p {
   font-weight: bold;
 }
 
+.hero-thankyou {
+  background-color: #FAFDFF;
+  background: none;
+}
+
+@media (min-width: 1450px) {
+  .hero {
+    background-position: 1000px 63px;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    background-position: 580px 63px;
   }
 }
 
@@ -754,12 +771,18 @@ h1, h2, p {
   .container {
     max-width: 700px;
   }
+  .hero {
+    background-position: 560px 63px;
+  }
   .hero-description__title {
     font-size: 35px;
   }
   .hero-description__desc {
     font-size: 15px;
     width: 100%;
+  }
+  .hero-description__text {
+    width: 350px;
   }
   .navbar-navigation {
     -webkit-box-pack: space-evenly;
@@ -771,6 +794,30 @@ h1, h2, p {
   }
   .agency-title {
     font-size: 35px;
+  }
+  .modal__infoButton {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .modal__info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 10px;
+  }
+  .modal__button {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    background-position: 480px 63px;
+    background-size: contain;
   }
 }
 
@@ -799,6 +846,7 @@ h1, h2, p {
     width: 100%;
     height: 100%;
     text-align: center;
+    overflow-y: scroll;
   }
   .navbar-navigation--visible {
     display: block;
@@ -814,11 +862,11 @@ h1, h2, p {
             align-items: center;
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   .navbar-menu__link {
     color: #FAFDFF;
-    font-size: 30px;
+    font-size: 26px;
   }
   .navbar-menu__item {
     margin-bottom: 30px;
@@ -826,11 +874,16 @@ h1, h2, p {
   .navbar-menu__icon {
     display: none;
   }
-  .hero-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .hero {
+    background: url("../../img/hero-pictures.png");
+    background-repeat: no-repeat;
+    background-position: 224px 463px;
+    background-size: 750px;
+    min-height: 1080px;
+  }
+  .hero-thankyou {
+    background-color: #FAFDFF;
+    background: none;
   }
   .hero-description {
     text-align: center;
@@ -850,22 +903,15 @@ h1, h2, p {
   }
   .hero-description__down {
     position: absolute;
-    bottom: 30px;
-    left: 50%;
-  }
-  .hero-image {
-    min-height: 500px;
-  }
-  .hero-image__hero-pictures {
-    width: 900px;
-    height: 500px;
+    bottom: -544px;
+    left: 48%;
   }
   .menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 19px;
     padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -889,10 +935,18 @@ h1, h2, p {
   .agency-title {
     font-size: 30px;
   }
+  .modal__input {
+    font-size: 12px;
+  }
+  .modal__message {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 576px) {
   .hero {
+    background-position: 120px 497px;
+    background-size: 630px;
     padding-bottom: 20px;
   }
   .hero-description__title {
@@ -903,11 +957,7 @@ h1, h2, p {
   }
   .hero-description__down {
     left: 46%;
-    bottom: 30px;
-  }
-  .hero-image__hero-pictures {
-    width: 800px;
-    height: 400px;
+    bottom: -474px;
   }
   .asia-title {
     font-size: 22px;
@@ -941,35 +991,42 @@ h1, h2, p {
     margin: 0 auto;
   }
   .hero {
-    padding: 24px 0 30px 0;
+    background-position: 98px 463px;
+    background-size: 530px;
+    min-height: 882px;
+    padding: 33px 0 30px 0;
+  }
+  .hero-thankyou {
+    background-color: #FAFDFF;
+    background: none;
   }
   .hero-description__title {
     font-size: 30px;
     line-height: 36px;
   }
   .hero-description__title-block {
-    margin-bottom: 8px;
+    margin-bottom: -10px;
   }
   .hero-description__text {
     text-align: center;
   }
   .hero-description__down {
-    left: 42%;
+    left: 40%;
+    bottom: -390px;
   }
   .hero-description__desc {
     font-size: 16px;
     line-height: 28px;
-    margin-bottom: 26px;
+    margin-bottom: 19px;
   }
-  .hero-image {
-    width: 405px;
-    min-height: 350px;
+  .hero-description__button {
+    padding: 12px 37px;
+    font-size: 16px;
+    line-height: 22px;
   }
-  .hero-image__hero-pictures {
-    width: 405px;
-    height: 235px;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .down-image {
+    width: 48px;
+    height: 48px;
   }
   .asia-title {
     font-size: 30px;
@@ -981,15 +1038,69 @@ h1, h2, p {
   }
 }
 
+@media (width: 320px) {
+  .hero {
+    background: url("../../img/hero-pictures-mobile.png");
+    background-color: #FAFDFF;
+    background-repeat: no-repeat;
+    background-position: -35px 450px;
+  }
+  .hero-description__down {
+    left: 40%;
+    bottom: -322px;
+  }
+}
+
+@media (max-height: 527px) {
+  .modal__dialog--visible {
+    overflow-y: auto;
+    max-height: 95vh;
+  }
+  .navbar-navigation--visible {
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 20px;
+  }
+}
+
 @media (min-width: 992px) {
+  .navbar-button:hover {
+    -webkit-box-shadow: 0 0 12px #00B8D9;
+            box-shadow: 0 0 12px #00B8D9;
+  }
   .navbar-menu__link:hover {
     color: #1565D8;
   }
   .navbar-menu__item--dropdown:hover .dropdown-content {
     display: block;
   }
-  .dropdown-content__link:hover {
-    color: #00B8D9;
+  .dropdown-content__link {
+    position: relative;
+  }
+  .dropdown-content__link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #00B8D9;
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+  }
+  .dropdown-content__link:hover:after {
+    width: 100%;
+  }
+  .hero-description__button:hover {
+    -webkit-box-shadow: 0 0 14px #00B8D9;
+            box-shadow: 0 0 14px #00B8D9;
+  }
+  .down-image:hover {
+    background-color: #98cdd6;
+  }
+  .modal__button:hover {
+    -webkit-box-shadow: 0 0 16px #00B8D9;
+            box-shadow: 0 0 16px #00B8D9;
   }
 }
 /*# sourceMappingURL=style.css.map */

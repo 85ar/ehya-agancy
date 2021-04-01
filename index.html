@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Ehya - web agancy</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -15,19 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="navbar navbar--mobile-fixed">
       <div class="container">
         <div class="navbar-block">
-          <div class="navbar-logo">
-            <a href="index.html" class="logo"
+          <div class="navbar-logo" data-aos="fade-right" data-aos-delay="100">
+            <a href="index.html" class="logo" 
               ><img src="img/Logo.svg" alt="logo: Ehya" class="logo__image"
             /></a>
           </div>
           <div class="navbar-navigation">
-            <ul class="navbar-menu">
+            <ul class="navbar-menu" data-aos="fade-left" data-aos-delay="200">
               <li class="navbar-menu__item">
                 <a href="" class="navbar-menu__link">Домой</a>
               </li>
@@ -64,12 +62,12 @@
                 <a href="" class="navbar-menu__link">Помощь</a>
               </li>
             </ul>
-            <button data-toggle="modal" class="button navbar-button">
+            <button data-toggle="modal" class="button navbar-button" type="submit" data-aos="fade-left" data-aos-delay="300">
               Получить
             </button>
           </div>
           <!-- /.navbar-navigation -->
-          <button class="menu-button navbar-top__menu-button">
+          <button class="menu-button menu-button-navbar">
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
@@ -96,20 +94,13 @@
               </p>
             </div>
             <!-- /.hero-description__text -->
-            <button class="hero-description__button">Наше портфолио</button>
+            <button class="hero-description__button" type="submit">Наше портфолио</button>
             <a href="#" class="hero-description__down"
               ><img src="img/down-image.svg" alt="" class="down-image"
             /></a>
           </div>
           <!-- /.hero-description -->
-          <div class="hero-image">
-            <img
-              src="img/hero-pictures.png"
-              alt="photo: Macbook"
-              class="hero-image__hero-pictures"
-            />
-          </div>
-          <!-- /.hero-image -->
+
         </div>
       </div>
     </section>
@@ -169,6 +160,7 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

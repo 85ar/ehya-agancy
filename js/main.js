@@ -30,6 +30,15 @@ $(document).on("keyup", function (esc) {
     modalDialog.removeClass("modal__dialog--visible");
   }
 });
+$(document).mouseup(function (e) {
+  var container = $(".modal__dialog");
+  if (container.has(e.target).length === 0) {
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    modalOverlay.removeClass("modal__overlay--visible");
+    modalDialog.removeClass("modal__dialog--visible");
+  }
+});
 // Обработка форм
 $(".form").each(function () {
   $(this).validate({
@@ -50,14 +59,16 @@ $(".form").each(function () {
     },
   });
 });
+
 $(document).ready(function () {
   $('input[name="phone"]').mask("+7 (999) 999-99-99");
 });
+
 AOS.init();
 
 AOS.init({
   disable: function () {
     var maxWidth = 992;
     return window.innerWidth < maxWidth;
-  },
-});
+    },
+  });

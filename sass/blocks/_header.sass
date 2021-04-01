@@ -11,10 +11,6 @@
     display: flex
     justify-content: space-between
     align-items: center
-  &-top
-    &__menu
-      &-button
-        display: none
   &-menu
     padding-right: 6px
     width: 415px
@@ -28,8 +24,6 @@
       &--dropdown
         position: relative
         display: inline-block
-        // &:hover .dropdown-content
-        //   display: block
     &__icon
       margin-left: 6px
     &__link
@@ -42,10 +36,8 @@
       text-decoration: none
       display: flex
       align-items: center
-      // &:hover
-      //   color: #1565D8
   &-button
-    padding: 13px 24px
+    padding: 11px 23px
     font-family: Open Sans
     font-style: normal
     font-weight: bold
@@ -58,9 +50,6 @@
     background-color: #FAFDFF
     cursor: pointer
     outline: none
-    // overflow: hidden
-    // text-overflow: ellipsis
-    // white-space: nowrap
 .logo
   &__image
     width: 90px
@@ -69,22 +58,19 @@
   &-content
     display: none
     position: absolute
-    // background-color: #1565D8
-    // min-width: 100px
-
-    // z-index: 1
     top: 20px
     right: 0
     &__link
       text-decoration: none
       display: block
-      // background-color: #FAFDFF
       color: #183B56
       font-family: Open Sans
       font-style: normal
       font-weight: 600
       font-size: 14px
       line-height: 22px
-      // &:hover
-      //   color: #00B8D9
+.menu
+  &-button
+    &-navbar 
+      display: none
 

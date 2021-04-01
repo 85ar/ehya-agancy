@@ -1,14 +1,16 @@
 h1, h2, p
   margin: 0
 .hero
+  
+  background: url('../../img/hero-pictures.png')
   background-color: #FAFDFF
+  background-repeat: no-repeat
+  background-position: 686px 63px
   padding-top: 52px
   padding-bottom: 100px
-  overflow: hidden
-  position: relative
   &-wrapper
-    display: flex
-
+    
+    position: relative
   &-description
     &__text
       width: 499px
@@ -20,6 +22,7 @@ h1, h2, p
       line-height: 60px
       letter-spacing: 0.2px
       color: #183B56
+      margin-bottom: 6px
     &__desc
       width: 457px
       font-family: Open Sans
@@ -30,7 +33,7 @@ h1, h2, p
       color: #5A7184
       margin-bottom: 63px
     &__button
-      padding: 15px 38px
+      padding: 15px 40px
       font-family: Open Sans
       font-style: normal
       font-weight: bold
@@ -43,20 +46,14 @@ h1, h2, p
       cursor: pointer
       border: none
       outline: none
-      // overflow: hidden
-      // text-overflow: ellipsis
-      // white-space: nowrap
-  &-image
-    position: relative
-    &__hero-pictures
-      position: absolute
-      top: 10px
-      left: -100px
-      object-fit: scale-down
-      width: 1030px
-      height: 657px
       overflow: hidden
-
+      text-overflow: ellipsis
+      white-space: nowrap
+    &__down
+      width: 54px
+      height: 56px
+      border-radius: 50%
+      object-fit: cover
 .asia
   &-title
     display: block
@@ -78,6 +75,6 @@ h1, h2, p
     color: #183B56
     display: block
     margin-bottom: 15px
-
 .down-image
   display: block
+  border-radius: 50%
