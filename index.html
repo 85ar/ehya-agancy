@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -90,7 +91,7 @@
           <div class="hero-description">
             <div class="hero-description__text">
               <div class="hero-description__title-block">
-                <h1 class="hero-description__title">Номер #1,</h1>
+                <h2 class="hero-description__title">Номер #1,</h2>
                 <span class="asia-title">Южная Азия</span>
                 <span class="agency-title">Агенство цифровых продуктов</span>
               </div>
@@ -165,7 +166,7 @@
     <!-- /.modal -->
     <section class="partners">
       <div class="container">
-        <h2 class="partners-title">Наши партнеры</h2>
+        <h4 class="partners-title">Наши партнеры</h4>
         <div class="partners-wrapper">
           <div class="partners-info">
             <div class="partners-info__name">
@@ -181,28 +182,48 @@
             </div>
           </div>
           <div class="partners-icons">
-            <a href="https://slack.com/" class="partners-icons-link" target="_blank" rel="nofollow noopener"
+            <a
+              href="https://slack.com/"
+              class="partners-icons-link"
+              target="_blank"
+              rel="nofollow noopener"
               ><img src="img/slack.svg" alt="icon: slack" class="partners-link"
             /></a>
-            <a href="https://www.netflix.com/" class="partners-icons-link" target="_blank" rel="nofollow noopener"
+            <a
+              href="https://www.netflix.com/"
+              class="partners-icons-link"
+              target="_blank"
+              rel="nofollow noopener"
               ><img
                 src="img/netflix.svg"
                 alt="icon: netflix"
                 class="partners-link"
             /></a>
-            <a href="https://www.fitbit.com/" class="partners-icons-link" target="_blank" rel="nofollow noopener"
+            <a
+              href="https://www.fitbit.com/"
+              class="partners-icons-link"
+              target="_blank"
+              rel="nofollow noopener"
               ><img
                 src="img/fitbit.svg"
                 alt="icon: fitbit"
                 class="partners-link"
             /></a>
-            <a href="https://www.google.ru/" class="partners-icons-link" target="_blank" rel="nofollow noopener"
+            <a
+              href="https://www.google.ru/"
+              class="partners-icons-link"
+              target="_blank"
+              rel="nofollow noopener"
               ><img
                 src="img/google.svg"
                 alt="icon: google"
                 class="partners-link"
             /></a>
-            <a href="https://www.airbnb.ru/" class="partners-icons-link" target="_blank" rel="nofollow noopener"
+            <a
+              href="https://www.airbnb.ru/"
+              class="partners-icons-link"
+              target="_blank"
+              rel="nofollow noopener"
               ><img
                 src="img/airbnb.svg"
                 alt="icon: airbnb"
@@ -324,7 +345,78 @@
       </div>
     </section>
     <!-- /.whatWeDo -->
+    <section class="portfolio">
+      <div class="container">
+        <h4 class="portfolio-title">портфолио</h4>
+        <h3 class="portfolio-name">Наши проекты</h3>
+        <div class="swiper-container portfolio-slider">
+          <div class="swiper-wrapper portfolio-wrapper">
+            <div class="portfolio-card swiper-slide">
+              <img
+                src="img/project-1.jpg"
+                alt="icon: project-1"
+                class="portfolio-card__image"
+              />
+              <div class="portfolio-info">
+                <h4 class="portfolio-info__landing">Вебсайт, Лендинг</h4>
+                <h3 class="portfolio-info__project">Проект Вебсайта</h3>
+              </div>
+            </div>
+            <!-- /.portfolio-card -->
+            <div class="portfolio-card swiper-slide">
+              <img
+                src="img/project-2.jpg"
+                alt="icon: project-2"
+                class="portfolio-card__image"
+              />
+              <div class="portfolio-info">
+                <h4 class="portfolio-info__landing">
+                  Панель навигации, UI/UX Дизайн
+                </h4>
+                <h3 class="portfolio-info__project">Проект Дизайна</h3>
+              </div>
+            </div>
+            <!-- /.portfolio-card -->
+            <div class="portfolio-card swiper-slide">
+              <img
+                src="img/project-3.jpg"
+                alt="icon: project-3"
+                class="portfolio-card__image"
+              />
+              <div class="portfolio-info">
+                <h4 class="portfolio-info__landing">
+                  Приложения, Мобильные, iOS
+                </h4>
+                <h3 class="portfolio-info__project">Проекты приложений</h3>
+              </div>
+            </div>
+            <!-- /.portfolio-card -->
+            <div class="portfolio-card swiper-slide">
+              <img
+                src="img/project-4.jpg"
+                alt="icon: project-4"
+                class="portfolio-card__image"
+              />
+              <div class="portfolio-info">
+                <h4 class="portfolio-info__landing">Instagram</h4>
+                <h3 class="portfolio-info__project">Проект Иллюстраций</h3>
+              </div>
+            </div>
+            <!-- /.portfolio-card -->
+          </div>
+          <!-- /.portfolio-wrapper -->
+          <button
+            class="portfolio-slider__button portfolio-slider__button--prev"
+          ></button>
+          <button
+            class="portfolio-slider__button portfolio-slider__button--next"
+          ></button>
+        </div>
+      </div>
+    </section>
+    <!-- /.portfolio -->
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/aos.js"></script>

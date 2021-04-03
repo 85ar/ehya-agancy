@@ -1,0 +1,92 @@
+.portfolio
+  position: relative
+  padding-bottom: 30px
+  &-wrapper
+    // display: flex
+    // align-items: center
+    // position: relative
+    width: 100%
+    overflow: hidden
+    // height: 100%
+    z-index: 1
+    // transition-property: transform
+    // box-sizing: content-box
+  &-slider
+    width: 100vw
+    height: 600px
+    position: static
+    overflow: hidden
+    // list-style: none
+    // padding: 0
+    z-index: 1
+    margin: 0
+    &__button
+      position: absolute
+      top: 37px
+      right: 303px
+
+      z-index: 99
+      width: 56px
+      height: 56px
+      border: none
+      background-color: transparent
+      cursor: pointer
+      background-repeat: no-repeat
+      background-position: center
+      // background-size: 10px
+      background-color: transparent
+      outline: none
+      &--prev
+        background-image: url(../img/button-prev.svg)
+
+      &--next
+        background-image: url(../img/button-next.svg)
+        right: 248px
+  &-title
+    font-family: Open Sans
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: #00B8D9
+    margin-bottom: 20px
+  &-name
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 48px
+    letter-spacing: 0.2px
+    color: #183B56
+    margin-bottom: 48px
+  &-card
+    width: 360px
+    height: 524px
+    &__image
+      display: block
+  &-info
+    width: 360px
+    height: 124px
+    padding: 24px 0 24px 24px
+    background: #FFFFFF
+    border: 1px solid #DDE6F4
+    border-radius: 0px 0px 8px 8px
+    &__landing
+      font-family: Open Sans
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 20px
+      color: #1565D8
+      margin-bottom: 16px
+    &__project
+      font-family: Roboto
+      font-style: normal
+      font-weight: bold
+      font-size: 30px
+      line-height: 40px
+      letter-spacing: 0.2px
+      color: #183B56
+

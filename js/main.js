@@ -72,3 +72,25 @@ AOS.init({
     return window.innerWidth < maxWidth;
     },
   });
+
+$(document).ready(function () {
+  var portfolioSlider = new Swiper(".portfolio-slider", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    // keyboard: {
+    //   enabled: true,
+    // },
+
+    navigation: {
+      nextEl: ".portfolio-slider__button--next",
+      prevEl: ".portfolio-slider__button--prev",
+    },
+  });
+  // var reviewsSlider = new Swiper(".reviews-slider", {
+  //   loop: true,
+
+  //   navigation: {
+  //     nextEl: ".reviews-slider__button--next",
+  //     prevEl: ".reviews-slider__button--prev",
+  //   },
+});

@@ -1,6 +1,7 @@
 @media (min-width: 1450px)
   .hero
     background-position: 1000px 63px
+
 @media (max-width: 1400px)
   .whatWeDo
     &-description
@@ -14,7 +15,12 @@
   .partners
     &-info
       max-width: 1000px
-
+@media (min-width: 1015px) and (max-width: 1400px)
+  .whatWeDo
+    &-cards
+      &__item
+        &:nth-child(-n+6)
+          margin-right: 20px
 @media (max-width: 1200px)
   .container
     max-width: 960px
@@ -48,7 +54,7 @@
     &-text
       min-width: 350px
       text-align: center
-  
+
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -229,7 +235,48 @@
         width: 400px
     &-icons
       width: 300px
-
+  .card-1
+    order: 1
+  .card-2
+    order: 2
+  .card-3
+    order: 5
+  .card-4
+    order: 3
+  .card-5
+    order: 4
+  .card-6
+    order: 6
+    padding-bottom: 5px
+    & h3
+      margin-top: -7px
+  .whatWeDo
+    padding: 68px 0
+    &-title
+      font-size: 28px
+      line-height: 36px
+      margin-bottom: 16px
+    &-text
+      font-size: 16px
+      line-height: 28px
+      min-width: 280px
+      margin-bottom: -32px
+    &-cards
+      &__item
+        width: 280px
+        min-height: 197px
+        padding: 19px 16px 13px 24px
+        margin-bottom: 7px
+        flex-direction: column
+      &__icon
+        width: 40px
+        height: 42px
+        margin-bottom: 20px
+      &-info
+        &__title
+          margin-bottom: 7px
+          font-size: 20px
+          line-height: 24px
 @media (min-width: 320px) and (max-width: 480px)
   body
     padding-top: 63px
@@ -297,7 +344,7 @@
         width: 280px
         line-height: 30px
         margin-bottom: 13px
-        
+
       &__about
         width: 100%
         margin-bottom: 24px
@@ -313,51 +360,6 @@
         margin-bottom: 26px
         &:last-child
           display: none
-  .whatWeDo
-    padding: 68px 0
-
-    &-title
-      font-size: 28px
-      line-height: 36px
-      margin-bottom: 16px
-    &-text
-      font-size: 16px
-      line-height: 28px
-      min-width: 280px
-      margin-bottom: -32px
-    &-cards
-      &__item
-        width: 280px
-        min-height: 197px
-        padding: 19px 16px 13px 24px        
-        margin-bottom: 7px
-        flex-direction: column
-      &__icon
-        width: 40px
-        height: 42px
-        margin-bottom: 20px
-      &-info
-        &__title
-          margin-bottom: 7px
-          font-size: 20px
-          line-height: 24px
-  .card-1
-    order: 1
-  .card-2
-    order: 2
-  .card-3
-    order: 5
-  .card-4
-    order: 3
-  .card-5
-    order: 4
-  .card-6
-    order: 6
-    padding-bottom: 5px
-    & h3
-      margin-top: -7px
-      
-
 @media (width: 320px)
   .hero
     background: url('../img/hero-pictures-mobile.png')
