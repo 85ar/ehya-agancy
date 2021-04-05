@@ -75,22 +75,62 @@ AOS.init({
 
 $(document).ready(function () {
   var portfolioSlider = new Swiper(".portfolio-slider", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 30,
-    // keyboard: {
-    //   enabled: true,
-    // },
+
+    keyboard: {
+      enabled: true,
+    },
 
     navigation: {
       nextEl: ".portfolio-slider__button--next",
       prevEl: ".portfolio-slider__button--prev",
     },
-  });
-  // var reviewsSlider = new Swiper(".reviews-slider", {
-  //   loop: true,
 
-  //   navigation: {
-  //     nextEl: ".reviews-slider__button--next",
-  //     prevEl: ".reviews-slider__button--prev",
-  //   },
+    on: {
+      // on the elements to add events
+      slideChangeTransitionEnd: function () {
+    
+        if (this.isEnd) {
+          this.navigation.$nextEl.css("opacity", "0.5");
+          this.navigation.$prevEl.css("opacity", "1");
+        } else {
+          this.navigation.$nextEl.css("opacity", "1");
+          this.navigation.$prevEl.css("opacity", "0.5");
+        }
+      },
+    },
+
+    breakpoints: {
+      767: {
+        slidesPerView: 1,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+  var feedbackSlider = new Swiper(".feedback-slider", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+
+    navigation: {
+      nextEl: ".feedback-slider__button--next",
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  });
 });

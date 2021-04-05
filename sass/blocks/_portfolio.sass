@@ -1,47 +1,39 @@
 .portfolio
+  // overflow: hidden
   position: relative
-  padding-bottom: 30px
+  padding-bottom: 161px
+  padding-top: 97px
   &-wrapper
-    // display: flex
-    // align-items: center
-    // position: relative
-    width: 100%
-    overflow: hidden
-    // height: 100%
-    z-index: 1
-    // transition-property: transform
-    // box-sizing: content-box
-  &-slider
-    width: 100vw
-    height: 600px
     position: static
-    overflow: hidden
-    // list-style: none
-    // padding: 0
-    z-index: 1
-    margin: 0
+
+    // &::first-child
+    //   margin-left: 15px
+  &-slider
+    position: static
+    // margin-left: 150px
+    overflow: visible
+    // width: 100vw
     &__button
       position: absolute
-      top: 37px
+      top: 132px
       right: 303px
-
       z-index: 99
       width: 56px
       height: 56px
       border: none
-      background-color: transparent
       cursor: pointer
       background-repeat: no-repeat
       background-position: center
-      // background-size: 10px
       background-color: transparent
-      outline: none
+      // outline: none
       &--prev
         background-image: url(../img/button-prev.svg)
-
+        // opacity: 0.5
+        outline: none
       &--next
         background-image: url(../img/button-next.svg)
         right: 248px
+        outline: none
   &-title
     font-family: Open Sans
     font-style: normal
@@ -64,12 +56,16 @@
   &-card
     width: 360px
     height: 524px
+    // &:last-child
+    //   margin-right: 30px
+    // &:nth-child(3)
+    //   margin-right: 30px
     &__image
       display: block
   &-info
     width: 360px
     height: 124px
-    padding: 24px 0 24px 24px
+    padding: 19px 0 24px 24px
     background: #FFFFFF
     border: 1px solid #DDE6F4
     border-radius: 0px 0px 8px 8px
@@ -89,4 +85,5 @@
       line-height: 40px
       letter-spacing: 0.2px
       color: #183B56
+
 
