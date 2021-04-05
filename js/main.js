@@ -90,7 +90,6 @@ $(document).ready(function () {
     on: {
       // on the elements to add events
       slideChangeTransitionEnd: function () {
-    
         if (this.isEnd) {
           this.navigation.$nextEl.css("opacity", "0.5");
           this.navigation.$prevEl.css("opacity", "1");
@@ -102,8 +101,17 @@ $(document).ready(function () {
     },
 
     breakpoints: {
-      767: {
+      480: {
         slidesPerView: 1,
+        spaceBetween: 5,
+      },
+      576: {
+        slidesPerView: 1.4,
+        spaceBetween: 5,
+      },
+      767: {
+        slidesPerView: 1.6,
+        spaceBetween: 5,
       },
       992: {
         slidesPerView: 2,

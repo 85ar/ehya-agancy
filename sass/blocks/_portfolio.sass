@@ -1,18 +1,12 @@
 .portfolio
-  // overflow: hidden
   position: relative
-  padding-bottom: 161px
-  padding-top: 97px
+  padding-bottom: 159px
+  padding-top: 99px
   &-wrapper
     position: static
-
-    // &::first-child
-    //   margin-left: 15px
   &-slider
     position: static
-    // margin-left: 150px
     overflow: visible
-    // width: 100vw
     &__button
       position: absolute
       top: 132px
@@ -25,10 +19,8 @@
       background-repeat: no-repeat
       background-position: center
       background-color: transparent
-      // outline: none
       &--prev
         background-image: url(../img/button-prev.svg)
-        // opacity: 0.5
         outline: none
       &--next
         background-image: url(../img/button-next.svg)
@@ -56,12 +48,9 @@
   &-card
     width: 360px
     height: 524px
-    // &:last-child
-    //   margin-right: 30px
-    // &:nth-child(3)
-    //   margin-right: 30px
     &__image
       display: block
+      object-fit: cover
   &-info
     width: 360px
     height: 124px
@@ -85,5 +74,3 @@
       line-height: 40px
       letter-spacing: 0.2px
       color: #183B56
-
-
